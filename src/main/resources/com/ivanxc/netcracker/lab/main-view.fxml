@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.shape.*?>
+
+<AnchorPane fx:id="scene" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="427.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.2" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.ivanxc.netcracker.lab.MainController">
+   <children>
+      <Rectangle fx:id="rectangle" arcHeight="5.0" arcWidth="5.0" fill="#dceeff" height="360.0" layoutX="20.0" layoutY="20.0" smooth="false" stroke="BLACK" strokeType="INSIDE" width="560.0" />
+      <Button layoutX="495.0" layoutY="387.0" mnemonicParsing="false" onAction="#addBall" text="ADD" />
+      <Label layoutX="20.0" layoutY="391.0" text="X:" />
+      <Label layoutX="89.0" layoutY="391.0" text="Y:" />
+      <Label layoutX="163.0" layoutY="391.0" text="Radius:" />
+      <Label layoutX="262.0" layoutY="391.0" text="Direction:" />
+      <Label layoutX="376.0" layoutY="391.0" text="Speed:" />
+      <TextField layoutX="30.0" layoutY="386.0" prefHeight="26.0" prefWidth="51.0" fx:id="x" />
+      <TextField fx:id="y" layoutX="99.0" layoutY="386.0" prefHeight="26.0" prefWidth="51.0" />
+      <TextField fx:id="radius" layoutX="201.0" layoutY="386.0" prefHeight="26.0" prefWidth="51.0" />
+      <TextField fx:id="direction" layoutX="313.0" layoutY="386.0" prefHeight="26.0" prefWidth="51.0" />
+      <TextField fx:id="speed" layoutX="412.0" layoutY="386.0" prefHeight="26.0" prefWidth="51.0" />
+      <Label fx:id="leftTopCoordinates" layoutX="16.0" layoutY="6.0" text="(x,y)" />
+      <Label fx:id="rightBottomCoordinates" layoutX="545.0" layoutY="378.0" text="(x,y)" />
+   </children>
+</AnchorPane>
