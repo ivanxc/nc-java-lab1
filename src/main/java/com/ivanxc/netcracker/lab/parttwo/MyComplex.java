@@ -1,6 +1,7 @@
 package com.ivanxc.netcracker.lab.parttwo;
 
 import java.math.BigDecimal;
+import java.util.Objects;
 
 public class MyComplex {
     private double real = 0.0;
@@ -113,6 +114,26 @@ public class MyComplex {
 
         return realAsBigDecimal.equals(anotherRealAsBigDecimal)
             && imagAsBigDecimal.equals(anotherImagAsBigDecimal);
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) {
+            return true;
+        }
+        if (o == null || getClass() != o.getClass()) {
+            return false;
+        }
+        MyComplex myComplex = (MyComplex) o;
+        return Double.compare(myComplex.real, real) == 0
+            && Double.compare(myComplex.imag, imag) == 0;
+    }
+
+    @Override
+    public int hashCode() {
+        int result = Double.hashCode(real);
+        result = 31 * result + Double.hashCode(imag);
+        return result;
     }
 
     @Override

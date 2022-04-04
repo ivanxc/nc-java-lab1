@@ -52,6 +52,25 @@ public class MyPoint {
     }
 
     @Override
+    public boolean equals(Object o) {
+        if (this == o) {
+            return true;
+        }
+        if (o == null || getClass() != o.getClass()) {
+            return false;
+        }
+        MyPoint myPoint = (MyPoint) o;
+        return x == myPoint.x && y == myPoint.y;
+    }
+
+    @Override
+    public int hashCode() {
+        int result = Integer.hashCode(x);
+        result = 31 * result + Integer.hashCode(y);
+        return result;
+    }
+
+    @Override
     public String toString() {
         return "(" + x + "," + y + ")";
     }

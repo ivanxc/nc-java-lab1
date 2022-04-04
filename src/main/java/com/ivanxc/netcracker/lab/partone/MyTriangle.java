@@ -45,6 +45,26 @@ public class MyTriangle {
     }
 
     @Override
+    public boolean equals(Object o) {
+        if (this == o) {
+            return true;
+        }
+        if (o == null || getClass() != o.getClass()) {
+            return false;
+        }
+        MyTriangle that = (MyTriangle) o;
+        return v1.equals(that.v1) && v2.equals(that.v2) && v3.equals(that.v3);
+    }
+
+    @Override
+    public int hashCode() {
+        int result = v1.hashCode();
+        result = 31 * result + v2.hashCode();
+        result = 31 * result + v3.hashCode();
+        return result;
+    }
+
+    @Override
     public String toString() {
         return "MyTriangle[" +
             "v1=" + v1 +
